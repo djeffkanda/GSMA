@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<descript>
+			<abstract>Les donn&amp;eacute;es concernant l&amp;rsquo;hydrographie sont
+&amp;eacute;quivalentes d&amp;rsquo;une base &amp;agrave; l&amp;rsquo;autre. Les
+donn&amp;eacute;es origine sont issues des fichiers transmis par SPIAF
+(Inventaire forestier). Pour les cours d&amp;rsquo;eau lin&amp;eacute;aire la
+base originelle &amp;eacute;tait plus d&amp;eacute;taill&amp;eacute;e dans les
+fichiers SPIAF que les fichiers MONUC. C&amp;rsquo;est donc celle-ci qui a
+servi de r&amp;eacute;f&amp;eacute;rence. Par la suite la MONUC a transmis une
+base de meilleure qualit&amp;eacute;, contenant plus de cours d&amp;rsquo;eau et
+d&amp;rsquo;informations sur les toponymes et le type
+d&amp;rsquo;&amp;eacute;coulement.Certain tron&amp;ccedil;ons de rivi&amp;egrave;res ont
+&amp;eacute;t&amp;eacute; digitalis&amp;eacute; (mise &amp;agrave; jour) sur image
+satellite par UNDP dans les provinces de Kinshasa, du Bas-Congo,du
+Katanga, Maniema, Nord et Sud-Kivu.&lt;br /&gt;
+&lt;br /&gt;
+The data concerning hydrography are equivalent from one database to
+another. These data originate from SPIAF transmissions (Forest
+Inventory). For the linear waterways, the original data base was more
+detailed in the SPIAF data than in MONUC, therefore, these were used as
+a reference. The suite of data transmitted by MONUC was of better
+quality as it contained, in addition to waterways, information about
+toponomy and flow type. Certain river segments were digitized from UNDP
+satellite images in the province of Kinshasa, lower Congo, Katanga,
+Maniema and North and South Kivu.&lt;br /&gt;</abstract>
+			<purpose/>
+			<supplinf/>
+		</descript>
+		<useconst>&lt;a rel="license" style="float:right;" href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" /&gt;&lt;/a&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"  target="_blank"&gt;Creative Commons Attribution-Noncommercial 3.0 License&lt;/a&gt;.</useconst>
+		<datacred/>
+		<citation>
+			<citeinfo>
+				<title>Hydrographie lineaire de Congo (linear hydrogaphy of Congo)</title>
+				<pubdate/>
+				<othercit/>
+				<origin>&lt;a href="http://www.rgc.cd/document.php?id_cat=2"&gt;Le Referential
+  Geographique Commun&lt;/a&gt;</origin>
+				<onlink>http://app.databasin.org/app/pages/datasetPage.jsp?id=cd1e546ca1c546afbaf5bb53fc9184aa</onlink>
+				<pubinfo>
+					<publish/>
+					<pubplace/>
+				</pubinfo>
+			</citeinfo>
+		</citation>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper/>
+					<cntorg>&lt;a href="http://www.rgc.cd/document.php?id_cat=2" target="_self"&gt;Le Referential Geographique Commun&lt;/a&gt;</cntorg>
+				</cntperp>
+				<cntemail/>
+			</cntinfo>
+		</ptcontac>
+		<status>
+			<progress/>
+			<update/>
+		</status>
+		<timeperd>
+			<timeinfo>
+				<sngdate/>
+				<current/>
+			</timeinfo>
+		</timeperd>
+		<keywords/>
+		<spdom>
+			<bounding>
+				<northbc>5.386097794923278</northbc>
+				<eastbc>31.275632880016797</eastbc>
+				<southbc>-13.41956237522612</southbc>
+				<westbc>12.267086040006586</westbc>
+			</bounding>
+		</spdom>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr/>
+		</attracc>
+		<complete/>
+		<lineage/>
+	</dataqual>
+	<eainfo>
+		<detailed>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attalias>FID</attalias>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attalias>Shape</attalias>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>SCE_SEM</attrlabl>
+				<attalias>SCE_SEM</attalias>
+				<attrdef>sce_sem</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>SCE_GEO</attrlabl>
+				<attalias>SCE_GEO</attalias>
+				<attrdef>sce_geo</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>MODIF</attrlabl>
+				<attalias>MODIF</attalias>
+				<attrdef>modif</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>ORIGINE</attrlabl>
+				<attalias>ORIGINE</attalias>
+				<attrdef>origine, source</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>LONGUEUR</attrlabl>
+				<attalias>LONGUEUR</attalias>
+				<attrdef>Longueur en Km, length in km</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>NOM</attrlabl>
+				<attalias>NOM</attalias>
+				<attrdef>Nom, name</attrdef>
+				<attrdomv/>
+			</attr>
+			<attr>
+				<attrlabl>CATEGORIE</attrlabl>
+				<attalias>CATEGORIE</attalias>
+				<attrdef>Catégorie de mouillage en m</attrdef>
+				<attrdomv/>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Hydrographie lineaire de Congo (linear hydrogaphy of Congo)</resdesc>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Data Basin (www.databasin.org)</cntorg>
+				</cntorgp>
+				<cntemail>databasin@consbio.org</cntemail>
+				<cntorgp/>
+			</cntinfo>
+			<cntinfo/>
+			<cntinfo/>
+		</distrib>
+		<stdorder>
+			<digform>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://app.databasin.org/app/pages/datasetPage.jsp?id=cd1e546ca1c546afbaf5bb53fc9184aa</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<Esri><CreaDate>20110515</CreaDate><CreaTime>05161400</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\IP-0A5317A4\C\arcgisserver\services\im2\cd1e546ca1c546afbaf5bb53fc9184aa\cd1e546ca1c546afbaf5bb53fc9184aa\commondata\data0\Hydro_lineaire</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="C:\arcgisserver\services\im2\cd1e546ca1c546afbaf5bb53fc9184aa\commondata\data0\Hydro_lineaire" dest="\\IP-0A5317A4\C\arcgisserver\services\im2\cd1e546ca1c546afbaf5bb53fc9184aa\cd1e546ca1c546afbaf5bb53fc9184aa\commondata\data0\Hydro_lineaire" date="20110515" time="05161400"></copy></copyHistory></DataProperties></Esri></metadata>
