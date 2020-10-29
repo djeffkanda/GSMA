@@ -27,7 +27,7 @@ patnExp = c(rep(0,NPat) )
 #patnInf[which(patNames == "Kinshasa")] = 500
 
 patnInf = epidata$`Cas confirmés`
-patnExp = c(rep(0,NPat) )
+patnExp = c(rep(0,NPat))
 
 
 #relative_move_data is a data frame that includes relative_move, and relative_contact.
@@ -46,8 +46,10 @@ relative_move_data$relative_contact = relative_move_data$relative_move
 #create the initial human population
 HPop = InitiatePop(pat_locator,patnInf,patnExp)
 ###dates of simulation. should be bounded by the dates where mobility data are available
+
 input_dates =  movement_data$date[which(movement_data$date > as.Date("2020-03-19"))]  #seq.Date(from = as.Date("2020-01-01"), to = as.Date("2020-02-01"),by="day")
  
+
 input_dates = unique(input_dates)[order(unique(input_dates))] 
 
 #run the simulation
@@ -62,8 +64,7 @@ all_spread = HPop_update$all_spread
 ggplot() + geom_line(data=epidemic_curve,mapping=aes(x=Date,y=inf))
 
 
-###plot a specific day of simulation; in this case, the 20th day -- you can see the date options by doing all_spread$dates
-#day_chosen = 1
+
 cases_on_days = data.frame()#as.data.frame(t(all_spread[which(all_spread$runday==day_chosen),3:dim(all_spread)[2]]))
 #cases_on_days$day = day_chosen
 for (day_chosen in 1:length(input_dates)) {
@@ -79,9 +80,44 @@ for (day_chosen in 1:length(input_dates)) {
 #merge the number of cases into the shapefile
 drc_shp_with_cases = merge(drc_shp,cases_on_days,by.x="Zone.Peupl",by.y="province")
 
-# # ggplot() + 
-# 
-# myPlot <-ggplot() + geom_sf(data=drc_shp_with_cases,mapping=aes(fill=cases, frame=date)) 
+#Formatting the df for plots
+drc_shp_with_cases_formatted = drc_shp_with_cases%>% 
+   group_by(day)%>%   
+   mutate(rank = rank(-cases), 
+          Value_rel = cases/cases[rank==1], 
+          Value_lbl = paste0(" ",cases))
+drc_shp_with_cases_formatted$cases = floor(drc_shp_with_cases_formatted$cases)
+
+
+# Plot map with cases per by zone
+myPlot<- ggplot() + geom_sf(data=drc_shp_with_cases_formatted,aes(fill=cases))+
+labs(title = 'Day: {frame_time}') +#+ scale_fill_distiller(trans="log10",palette="YlOrRd",direction=1)
+   scale_fill_distiller(trans="log10",palette="YlOrRd",direction=1)+
+   transition_time(day)+
+   ease_aes()
+
+
+#animate map as gif
+map_animated_plot <- animate(myPlot,
+                             duration = 60,
+                             fps = 2,
+                             width = 650,
+                             height = 400, 
+                             renderer = gifski_renderer())
+
+#animate map as mp4
+map_animated_plot_mp4 = animate(myPlot, 102, fps = 3,  width = 1200, height = 1000,
+        renderer = ffmpeg_renderer()) -> for_mp4
+anim_save("simulation_map.mp4", animation = for_mp4 )
+
+map_animated_plot
+
+
+#myPlot <- ggplot() + geom_sf(data=drc_shp_with_cases) 
+#myPlot
+
+
+#,mapping=aes(fill=cases, frame=date)
 #      + scale_fill_distiller(trans="log10",palette="YlOrRd",direction=1)
 # +
 #    # gganimate specific bits:
@@ -96,16 +132,7 @@ drc_shp_with_cases = merge(drc_shp,cases_on_days,by.x="Zone.Peupl",by.y="provinc
 
 
 
-
-
-drc_shp_with_cases_formatted = drc_shp_with_cases%>% 
-   group_by(day)%>%   
-   mutate(rank = rank(-cases), 
-          Value_rel = cases/cases[rank==1], 
-          Value_lbl = paste0(" ",cases))
-
-
-drc_shp_with_cases_formatted$cases = floor(drc_shp_with_cases_formatted$cases)
+# Barchart of cases by zone de santes (ranked)
 staticplot = ggplot(drc_shp_with_cases_formatted, aes(rank, group = Zone.Peupl, 
                                        fill = as.factor(Zone.Peupl), color = as.factor(Zone.Peupl))) +
    geom_tile(aes(y = cases/2,
@@ -146,12 +173,12 @@ anim = staticplot + transition_states(date, transition_length = 4, state_length 
 
 
 animate(anim, 102, fps = 3,  width = 1200, height = 1000, 
-        renderer = gifski_renderer("gganim.gif"))
+        renderer = gifski_renderer("simulation_bar.gif"))
 
 
 animate(anim, 102, fps = 5,  width = 1200, height = 1000,
         renderer = ffmpeg_renderer()) -> for_mp4
-anim_save("animation.mp4", animation = for_mp4 )
+anim_save("simulation_bar.mp4", animation = for_mp4 )
 
 
 

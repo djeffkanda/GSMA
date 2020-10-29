@@ -93,7 +93,6 @@ recoveryTimeStep = function(HPop, recrate_values,current_day){
     #print(HPop$nRecoveredToday[i])
     HPop$nInf[i] = HPop$nInf[i] - HPop$nRecoveredToday[i]
     HPop$nRec[i] = HPop$nRec[i] + HPop$nRecoveredToday[i]
-    
   }
   for (i in 1:length(HPop$nInf)){
     if (HPop$nRec[i] > HPop$nTotal[i] - HPop$nExp[i] - HPop$nInf[i]){

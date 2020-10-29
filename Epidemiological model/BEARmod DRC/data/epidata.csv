@@ -1,30 +1,30 @@
 ,patNames,Cas confirmés,patIDs
-4,Barumbu,130.0,1
-7,Binza Meteo,361.0,2
-8,Binza Ozone,491.0,3
-14,Bumbu,45.0,4
-22,Gombe,1122.0,5
-31,Kalamu I,89.0,6
-32,Kalamu II,53.0,7
-40,Kasa-Vubu,278.0,8
-48,Kikimi,9.0,9
-49,Kimbanseke,40.0,10
-51,Kingabwa,104.0,11
-54,Kinshasa,120.0,12
-55,Kintambo,261.0,13
-59,Kisenso,18.0,14
-61,Kokolo,596.0,15
-64,Lemba,489.0,16
-66,Limete,704.0,17
-75,Makala,21.0,18
-78,Maluku I,7.0,19
-80,Masina I,81.0,20
-81,Masina II,18.0,21
-83,Matete,107.0,22
-88,Mont Ngafula I,224.0,23
-89,Mont Ngafula II,49.0,24
-97,Ndjili,126.0,25
-98,Nsele,91.0,26
-100,Ngiri-Ngiri,64.0,27
-108,Police,68.0,28
-113,Selembao,111.0,29
+12,Barumbu,130.0,1
+25,Binza Meteo,361.0,2
+26,Binza Ozone,491.0,3
+44,Bumbu,45.0,4
+71,Gombe,1122.0,5
+94,Kalamu I,89.0,6
+95,Kalamu II,53.0,7
+121,Kasa-Vubu,278.0,8
+134,Kikimi,20.0,9
+139,Kimbanseke,47.0,10
+144,Kingabwa,104.0,11
+147,Kinshasa,120.0,12
+148,Kintambo,261.0,13
+152,Kisenso,19.0,14
+158,Kokolo,797.0,15
+166,Lemba,558.0,16
+170,Limete,704.0,17
+195,Makala,21.0,18
+198,Maluku I,7.0,19
+207,Masina I,81.0,20
+208,Masina II,18.0,21
+212,Matete,107.0,22
+225,Mont Ngafula I,224.0,23
+226,Mont Ngafula II,49.0,24
+245,Ndjili,126.0,25
+248,Ngiri-Ngiri,64.0,26
+252,Nsele,91.0,27
+268,Police,454.0,28
+281,Selembao,111.0,29
