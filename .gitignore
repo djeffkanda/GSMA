@@ -4,4 +4,7 @@
 .Ruserdata
 data/
 epidemiological_model/BEARmod_DRC/data
+<<<<<<< HEAD
 .ipynb_checkpoints/
+=======
+>>>>>>> 9634f9df37cf1e6abe0ddf1153ca7289a36309a8
