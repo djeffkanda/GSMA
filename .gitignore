@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 data/
+epidemiological_model/BEARmod_DRC/data
+.ipynb_checkpoints/
